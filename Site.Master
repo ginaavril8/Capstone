@@ -50,8 +50,7 @@
                     <a class="navbar-brand" style="color:darkorange" runat="server" href="~/">The Boneyard</a>
                 </div>
                 <div class="navbar-collapse collapse" >
-                    <ul class="nav navbar-nav"  >
-                        <li><a style="color:darkorange" runat="server" href="~/Homepage">Home</a></li>
+                    <ul class="nav navbar-nav pull-right"  >
                         <li><a style="color:darkorange" runat="server" href="~/Menu">Menu</a></li>
                         <li><a style="color:darkorange" runat="server" href="~/Leaderboard">Leaderboard</a></li>
                         <li><a style="color:darkorange" runat="server" href="~/About">About</a></li>
@@ -71,7 +70,6 @@
 
         <div class="footer-div">
             <footer>
-                <hr />
                 <p>&copy; <%: DateTime.Now.Year %> - Capstone</p>
             </footer>
         </div>

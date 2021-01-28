@@ -10,7 +10,7 @@
 
 namespace Capstone
 {
-    public partial class _Default
+    public partial class Homepage
     {
     }
 }
