@@ -2,6 +2,7 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: black;
 }
 
 /* Wrapping element */
@@ -18,7 +19,6 @@ textarea {
     max-width: 280px;
 }
 
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
@@ -29,3 +29,9 @@ textarea {
         padding: 0;
     }
 }
+
+
+.navbar-inverse {
+    background-color: black;
+}
+

@@ -6,6 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href ="style.css" />
     <title><%: Page.Title %> </title>
 
     <asp:PlaceHolder runat="server">
@@ -46,17 +47,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Wings</a>
+                    <a class="navbar-brand" style="color:darkorange" runat="server" href="~/">The Boneyard</a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Homepage">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Menu">Menu</a></li>
-                        <li><a runat="server" href="~/Leaderboard">Leaderboard</a></li>
-                        <li><a runat="server" href="~/Login">Login</a></li>
-                        <li><a runat="server" href="~/Signup">Sign Up</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                <div class="navbar-collapse collapse" >
+                    <ul class="nav navbar-nav"  >
+                        <li><a style="color:darkorange" runat="server" href="~/Homepage">Home</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/Menu">Menu</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/Leaderboard">Leaderboard</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/About">About</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/Contact">Contact</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/Signup">Sign Up</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/Login">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,9 +65,13 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
 
-            </asp:ContentPlaceHolder>
-            <hr />
+            </asp:ContentPlaceHolder>            
+
+        </div>
+
+        <div class="footer-div">
             <footer>
+                <hr />
                 <p>&copy; <%: DateTime.Now.Year %> - Capstone</p>
             </footer>
         </div>

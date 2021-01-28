@@ -128,6 +128,10 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Homepage.aspx" />
+    <Content Include="Images\homepageAbout.jpg" />
+    <Content Include="Images\homepageLeaderboard.jpg" />
+    <Content Include="Images\homepageMenu.jpg" />
+    <Content Include="Images\homepageWings.jpg" />
     <Content Include="Leaderboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
@@ -267,7 +271,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
