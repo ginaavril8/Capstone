@@ -13,5 +13,22 @@ namespace Capstone.Backend
         {
 
         }
+        protected void loginButton_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Capstone" && txtPassword.Text == "NEIT")
+            {
+                //If both entries are a match, set sessions so that other pages know that they are logged in
+                Session["userName"] = txtUsername.Text;
+                Session["loginSuccessful"] = "TRUE";
+                lblFeedback.Text = "Login successful.";
+            }
+            else
+            {
+                //Else, show try again message
+                Session["userName"] = "";
+                Session["loginSuccessful"] = "FALSE";
+                lblFeedback.Text = "Login unsuccessful. Please try again.";
+            }
+        }
     }
 }

@@ -105,6 +105,8 @@
     <Content Include="About.aspx" />
     <Content Include="Backend\ControlPanel.aspx" />
     <Content Include="Backend\Default.aspx" />
+    <Content Include="Backend\WingManager.aspx" />
+    <Content Include="Backend\WingSearch.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -189,6 +191,20 @@
     </Compile>
     <Compile Include="Backend\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\WingManager.aspx.cs">
+      <DependentUpon>WingManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\WingManager.aspx.designer.cs">
+      <DependentUpon>WingManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\WingSearch.aspx.cs">
+      <DependentUpon>WingSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\WingSearch.aspx.designer.cs">
+      <DependentUpon>WingSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
