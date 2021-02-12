@@ -29,12 +29,12 @@
     <%-- Wing Information --%>
     <tr>
         <td>Wing Flavor(s)</td>
-        <td><asp:Textbox ID="txtWingFlavor" runat="server" MaxLength="20" /></td>
+        <td><asp:Textbox ID="txtWingFlavor" runat="server" MaxLength="50" /></td>
     </tr>
 
     <tr>
         <td>Wing Description</td>
-        <td><asp:Textbox ID="txtWingDesc" runat="server" MaxLength="40" /></td>
+        <td><asp:Textbox ID="txtWingDesc" runat="server" MaxLength="200" /></td>
     </tr>
 
 

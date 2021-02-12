@@ -13,5 +13,10 @@ namespace Capstone
         {
 
         }
+        protected void signUpButton_Click(object sender, EventArgs e)
+        {
+
+            /*-------------------------------------------------------------- NEEDS TO BE CONNECTED TO DB --------------------------------- */
+        }
     }
 }

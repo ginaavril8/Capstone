@@ -169,6 +169,7 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\userCredentials.cs" />
     <Compile Include="App_Code\wing.cs" />
     <Compile Include="App_Code\validation.cs" />
     <Compile Include="App_Code\Ewing.cs" />

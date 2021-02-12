@@ -20,7 +20,7 @@
     <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false">
 
         <Columns>
-             <asp:BoundColumn DataField="WingName" HeaderText="Wing Name" />
+             <asp:BoundColumn DataField="WingName" HeaderText="Name" /> 
              <asp:BoundColumn DataField="WingDesc" HeaderText="Description" /> 
 
              <asp:HyperLinkColumn Text="Edit" DataNavigateUrlFormatString="~/Backend/WingManager.aspx?EwingID={0}" DataNavigateUrlField="wingID" />
