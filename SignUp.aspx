@@ -3,9 +3,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    <!-- ------------------------------------------------------ NEEDS TO BE CONNECTED TO DATABASE ---------------------------------------------->
-   
+ 
 
 <table>
 
