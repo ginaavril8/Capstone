@@ -29,14 +29,14 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (!validation.badWords(value))
+                //Check for empty spaces
+                if (validation.dataEntered(value))
                 {
                     firstName = value; //if the value does not contain bad words, store it
                 }
                 else
                 {
-                    feedback += "\n ERROR: First name contains an inappropiate word.";
+                    feedback += "\n <br> ERROR: Please enter a valid name.";
                 }
             }
              
@@ -51,13 +51,13 @@ namespace Capstone.App_Code
             set
             {
                 //check for bad words
-                if (!validation.badWords(value))
+                if (validation.dataEntered(value))
                 {
-                    firstName = value; //if the value does not contain bad words, store it
+                    lastName = value; //if the value does not contain bad words, store it
                 }
                 else
                 {
-                    feedback += "\n ERROR: Last name contains an inappropiate word.";
+                    feedback += "\n <br> ERROR: Please enter a last name.";
                 }
             }
 
@@ -74,13 +74,13 @@ namespace Capstone.App_Code
             set
             {
                 //check for bad words
-                if (!validation.badWords(value))
+                if (validation.dataEntered(value))
                 {
                     userName = value; //if the value does not contain bad words, store it
                 }
                 else
                 {
-                    feedback += "\n ERROR Username contains inapproriate words.";
+                    feedback += "\n <br> ERROR: Please enter a username.";
                 }
             }
 
@@ -101,7 +101,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
-                    feedback += "\n ERROR: Please enter a valid email.";
+                    feedback += "\n <br> ERROR: Please enter a valid email.";
                 }
             }
 
@@ -123,7 +123,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
-                    feedback += "\n ERROR: Please enter a valid password.";
+                    feedback += "\n <br> ERROR: Please enter a valid password.";
                 }
             }
 
@@ -226,7 +226,7 @@ namespace Capstone.App_Code
                 //Phone or "dial" the DB
                 int intRecs = comm.ExecuteNonQuery();
                 //strResult = $"SUCCESS: Inserted {intRecs} records."; //Report that DB accepted record 
-                strResult = $"Welcome."; //Report that DB accepted record 
+                strResult = $"<br> Welcome!"; //Report that DB accepted record 
                 Conn.Close();
             }
             catch (Exception err)
