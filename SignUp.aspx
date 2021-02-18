@@ -49,8 +49,9 @@
     <%-- Sign up / Add to database --%>  
 
         <asp:Button ID="signUpButton" runat="server" onClick="signUpButton_Click" Text="Sign Up" />
+    <br />
+    <br />
 
-
-        <asp:Label ID="lblFeedback" runat="server" Text="" />
+        <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center;" />
  
 </asp:Content>

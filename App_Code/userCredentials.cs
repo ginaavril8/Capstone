@@ -169,7 +169,7 @@ namespace Capstone.App_Code
             lastName = "";
             userPassword = "";
             userEmail = "";
-            wingTally = 0;
+            wingTally = 5;
             feedback = "";
 
         }
