@@ -5,52 +5,52 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <!-- ------------------------------------------------------ NEEDS TO BE CONNECTED TO DATABASE ---------------------------------------------->
-        <div>
-        <h3><strong>First Name:</strong></h3>
-        <asp:TextBox ID="txtFirstName" runat="server" />
+   
 
-        <br />
-        <br />
+<table>
 
-        <h3><strong>Last Name:</strong></h3>
-        <asp:TextBox ID="txtLastName" runat="server"/>
 
-        <br />
-        <br />
+<%-- First Name --%>
+    <tr>
+        <td>First Name:</td>
+        <td><asp:TextBox ID="txtFirstName" runat="server" /></td>
+    </tr>
+             
+                
+<%-- Last Name --%>
+    <tr>
+        <td>Last Name:</td>
+        <td><asp:TextBox ID="txtLastName" runat="server" /></td>
+    </tr>
 
-        <h3><strong>Username:</strong></h3>
-        <asp:TextBox ID="txtUserName" runat="server"/>
+<%-- Username --%>
+    <tr>
+        <td>Username:</td>
+        <td><asp:TextBox ID="txtUserName" runat="server" /></td>
+    </tr>
+        
 
-        <br />
-        <br />
+<%-- Email --%>
+    <tr>
+        <td>Email:</td>
+        <td><asp:TextBox ID="txtEmail" runat="server"  /></td>
+    </tr>
 
-        <br />
-        <h3><strong>Email:</strong></h3>
-        <asp:TextBox ID="txtEmail1" runat="server"/>
 
-        <br />
-        <h3><strong>Confirm Email:</strong></h3>
-        <asp:TextBox ID="txtEmail2" runat="server" />
+<%-- Password --%>
+    <tr>
+        <td>Password:</td>
+        <td><asp:TextBox ID="txtUserPassword" TextMode="Password" runat="server" /></td>
+    </tr>
 
-        <br />
-        <br />
+</table>
 
-        <h3><strong>Password:</strong></h3>
-        <asp:TextBox ID="txtUserPassword1" runat="server" TextMode="Password"/>
 
-        <br />
-
-        <h3><strong>Confirm Password:</strong></h3>
-        <asp:TextBox ID="txtUserPassword2" runat="server" TextMode="Password"/>
-
-        <br />
-        <br />
+    <%-- Sign up / Add to database --%>  
 
         <asp:Button ID="signUpButton" runat="server" onClick="signUpButton_Click" Text="Sign Up" />
 
-        <br />
-        <br />
 
         <asp:Label ID="lblFeedback" runat="server" Text="" />
-    </div>
+ 
 </asp:Content>

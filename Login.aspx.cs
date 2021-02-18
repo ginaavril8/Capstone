@@ -22,7 +22,7 @@ namespace Capstone
 
         protected void loginButton_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == txtUserName && txtUserPassword1.Text == txtUserPassword1)
+          /*  if (txtUserName.Text == txtUserName && txtUserPassword1.Text == txtUserPassword1)
             {
                 //If both entries are a match, set sessions so that other pages know that they are logged in
                 Session["userName"] = txtUsername.Text;
@@ -35,7 +35,7 @@ namespace Capstone
                 Session["userName"] = "";
                 Session["loginSuccessful"] = "FALSE";
                 lblFeedback.Text = "Login unsuccessful. Please try again.";
-            }
+            }*/
         }
     }
 }

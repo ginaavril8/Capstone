@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web; 
+using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using Capstone.App_Code;
 
 
 namespace Capstone.App_Code
@@ -36,7 +39,7 @@ namespace Capstone.App_Code
                     feedback += "\n ERROR: First name contains an inappropiate word.";
                 }
             }
-
+             
         }
 
         public string LastName
@@ -92,7 +95,7 @@ namespace Capstone.App_Code
             set
             {
                 //check for bad words
-                if (!validation.validateEmail(value))
+                if (validation.validateEmail(value))
                 {
                     userEmail = value; //if the value does not contain bad words, store it
                 }
@@ -170,75 +173,74 @@ namespace Capstone.App_Code
             feedback = "";
 
         }
+
+
+
+
+
+        //Utility function -- controls all SQL Server login info
+        private string GetConnected()
+        {
+            return @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE245_GMartin;User Id=SE245_GMartin;Password=008003563;";
+        }
+
+
+
+        //Add a record, but first connect to the database
+        public string AddARecord()
+        {
+            //Int string variable
+            string strResult = "";
+
+            //Make connection to object 
+            SqlConnection Conn = new SqlConnection();
+
+            //Initialize it's properties
+            Conn.ConnectionString = @GetConnected(); //Set who/what/where of DB
+
+            string strSQL = "INSERT INTO userCredentials (firstName, lastName, userName, userPassword, userEmail, wingTally) VALUES (@firstName, @lastName, @userName, @userPassword, @userEmail, @wingTally)";
+
+
+            //Bark out command
+            SqlCommand comm = new SqlCommand();
+            comm.CommandText = strSQL; //Commander knows what to say
+            comm.Connection = Conn; //Where is the phone? Right here.
+
+
+            //Fill in all perameters in the same order
+            comm.Parameters.AddWithValue("@firstName", firstName);
+            comm.Parameters.AddWithValue("@lastName", lastName);
+            comm.Parameters.AddWithValue("@userName", userName);
+            comm.Parameters.AddWithValue("@userPassword", userPassword);
+            comm.Parameters.AddWithValue("@userEmail", userEmail);
+            comm.Parameters.AddWithValue("@wingTally", wingTally);
+            // comm.Parameters.AddWithValue("@userID", EwingID);
+
+
+
+            //Attempt connection to the server
+
+            try
+            {
+                Conn.Open();
+                //Phone or "dial" the DB
+                int intRecs = comm.ExecuteNonQuery();
+                //strResult = $"SUCCESS: Inserted {intRecs} records."; //Report that DB accepted record 
+                strResult = $"Welcome."; //Report that DB accepted record 
+                Conn.Close();
+            }
+            catch (Exception err)
+            //Connect to DB
+            {
+                strResult = "ERROR: " + err.Message;
+                // & error info
+            }
+            finally
+            {
+
+            }
+            //Return resulting feedback string
+            return strResult;
+        }
     }
 }
-
-
-
-/*
-//Utility function -- controls all SQL Server login info
-private string GetConnected()
-{
-    return @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE245_GMartin;User Id=SE245_GMartin;Password=008003563;";
-}
-
-
-
-//Add a record, but first connect to the database
-public string AddARecord()
-{
-    //Int string variable
-    string strResult = "";
-
-    //Make connection to object 
-    SqlConnection Conn = new SqlConnection();
-
-    //Initialize it's properties
-    Conn.ConnectionString = @GetConnected(); //Set who/what/where of DB
-
-    string strSQL = "INSERT INTO userCredentials (firstName, lastName, userName, userPassword, userEmail, wingTally) VALUES (@firstName, @lastName, @userName, @userPassword, @userEmail, @wingTally)";
-
-
-    //Bark out command
-    SqlCommand comm = new SqlCommand();
-    comm.CommandText = strSQL; //Commander knows what to say
-    comm.Connection = Conn; //Where is the phone? Right here.
-
-
-    //Fill in all perameters in the same order
-    comm.Parameters.AddWithValue("@firstName", firstName);
-    comm.Parameters.AddWithValue("@lastName", lastName);
-    comm.Parameters.AddWithValue("@userName", userName);
-    comm.Parameters.AddWithValue("@userPassword", userPassword);
-    comm.Parameters.AddWithValue("@userEmail", userEmail);
-    comm.Parameters.AddWithValue("@wingTally", wingTally);
-    // comm.Parameters.AddWithValue("@userID", EwingID);
-
-
-
-    //Attempt connection to the server
-
-    try
-    {
-        Conn.Open();
-        //Phone or "dial" the DB
-        int intRecs = comm.ExecuteNonQuery();
-        //strResult = $"SUCCESS: Inserted {intRecs} records."; //Report that DB accepted record 
-        strResult = $"Welcome."; //Report that DB accepted record 
-        Conn.Close();
-    }
-    catch (Exception err)
-    //Connect to DB
-    {
-        strResult = "ERROR: " + err.Message;
-        // & error info
-    }
-    finally
-    {
-
-    }
-    //Return resulting feedback string
-    return strResult;
-}
-
-*/
