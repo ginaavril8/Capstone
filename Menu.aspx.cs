@@ -13,5 +13,10 @@ namespace Capstone
         {
 
         }
+
+        protected void btnRefesh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
