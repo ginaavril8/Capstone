@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Backend\ContactUsAdmin.aspx" />
     <Content Include="Backend\ControlPanel.aspx" />
     <Content Include="Backend\Default.aspx" />
     <Content Include="Backend\WingManager.aspx" />
@@ -183,6 +184,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Backend\ContactUsAdmin.aspx.cs">
+      <DependentUpon>ContactUsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backend\ContactUsAdmin.aspx.designer.cs">
+      <DependentUpon>ContactUsAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Backend\ControlPanel.aspx.cs">
       <DependentUpon>ControlPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
