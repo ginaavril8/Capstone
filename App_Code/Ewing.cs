@@ -108,7 +108,7 @@ namespace Capstone.App_Code
 
 
         //--------------------------------------------------------- DATA SERVER - P1: DRILL DOWN SEARCH | DS ----------------------------------------------------
-       
+
         public DataSet SearchEwing_DS(string strWingName, string strWingDesc)
         {
             //Create a dataset to return filled
@@ -132,12 +132,12 @@ namespace Capstone.App_Code
                 comm.Parameters.AddWithValue("@wingDesc", "%" + strWingDesc + "%");
             }
 
+ 
 
+               
+                //----------------------------------------------------------- Create a Database Tools & Configure | DS ---------------------------------------------- 
 
-
-            //----------------------------------------------------------- Create a Database Tools & Configure | DS ---------------------------------------------- 
-
-            SqlConnection conn = new SqlConnection();
+                SqlConnection conn = new SqlConnection();
 
             //Create who/what/where of Database
             string strConn = GetConnected();
@@ -200,9 +200,9 @@ namespace Capstone.App_Code
 
 
 
-            //----------------------------------------------------------- Create a Database Tools & Configure | DR ---------------------------------------------- 
+                //----------------------------------------------------------- Create a Database Tools & Configure | DR ---------------------------------------------- 
 
-            SqlConnection conn = new SqlConnection();
+                SqlConnection conn = new SqlConnection();
 
             //Create who/what/where of Database
             string strConn = GetConnected();
