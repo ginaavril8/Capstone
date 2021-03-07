@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using Capstone.App_Code;
+using Capstone.App_Code; 
 
 
 namespace Capstone
@@ -15,6 +15,7 @@ namespace Capstone
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        
 
         }
 
