@@ -318,7 +318,9 @@ namespace Capstone.App_Code
 
 
             //Update SQL command string
-            string strSQL = "UPDATE wingFlavors SET wingName = @wingName, wingFlavor = @wingFlavor, wingDesc = @wingDesc, wingID = @wingID WHERE wingID = @wingID;";
+            string strSQL = "UPDATE wingFlavors SET wingName = @wingName, wingFlavor = @wingFlavor, wingDesc = @wingDesc WHERE wingID = @wingID;";
+
+            //string strSQL = "UPDATE wingFlavors SET wingName = @wingName, wingFlavor = @wingFlavor, wingDesc = @wingDesc, wingID = @wingID WHERE wingID = @wingID;";
 
             SqlConnection conn = new SqlConnection();
             string strConn = GetConnected();
@@ -333,9 +335,10 @@ namespace Capstone.App_Code
             //Fill in all perameters in the same order
             comm.Parameters.AddWithValue("@WingName", WingName);
             comm.Parameters.AddWithValue("@WingFlavor", WingFlavor);
-            comm.Parameters.AddWithValue("@WingDesc", WingDesc); 
+            comm.Parameters.AddWithValue("@WingDesc", WingDesc);
+            //comm.Parameters.AddWithValue("@wingID", intWingID);
             comm.Parameters.AddWithValue("@wingID", EwingID);
-
+            
 
             try
             {

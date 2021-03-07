@@ -43,22 +43,25 @@
 
                <%-- Add Wing Button (to Database) --%>
             <br />
-
+            &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
 
                 <%-- Delete Button --%>
             <br />
 
+            &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
 
                <%-- Update Button --%>
             <br />
 
+            &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
 
                <%-- Cancle Button --%>
             <br />
-
+ 
+            &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
 
     <%-- Feedback Label--%>
