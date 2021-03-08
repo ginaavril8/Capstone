@@ -126,6 +126,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\aboutpage.jpg" />
+    <Content Include="Images\contactpage.jpg" />
+    <Content Include="Images\leaderboardpage.jpg" />
+    <Content Include="Images\memberloginpage.jpg" />
+    <Content Include="Images\menupage.jpg" />
+    <Content Include="Images\signuppage.jpg" />
     <Content Include="UserPages\UserPage.aspx" />
     <Content Include="WishList.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

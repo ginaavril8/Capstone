@@ -6,24 +6,24 @@
 
 
     <img src="Images/homepageWings.jpg" alt="" style="max-width:100%; height:auto;" />
-    <p style="text-align:center; font-size: 56px; color:darkorange;">Welcome to The Boneyard!</p>
+    <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Welcome to The Boneyard!</p>
     
-    <p style="text-align:center; font-size: 24px; color:darkorange;">Proudly serving award winning wings with homemade artisan sauces in a fun, family friendly atmosphere!</p>
+    <p style="text-align:center; font-size: 24px; color:#FFE4C4; font-family:Roboto;">Proudly serving award winning wings with homemade artisan sauces in a fun, family friendly atmosphere!</p>
 
         <br />
     <br />
 
     <div class="homeDiv">
         <img src="Images/homepageMenu.jpg" alt=""  style="max-width:60%; height:auto; float:left;" />
-        <a href="~/Menu.aspx" style="text-align:center; font-size: 36px; color:darkorange; float:right;">View the menu</a>
+        <a href="~/Menu.aspx" style="text-align:center; font-size: 24px; color:#FF6900; font-family:Sigmar One; float:right;">Menu</a>
     </div>
     <div class="homeDiv">
-        <a href="~/Leaderboard.aspx" style="text-align:center; clear:left; font-size: 36px; color:darkorange; float:left;">Check the leaderboard</a>
+        <a href="~/Leaderboard.aspx" style="text-align:center; clear:left; font-size: 24px; color:#FF6900; font-family:Sigmar One; float:left;">Leaderboard</a>
         <img src="Images/homepageLeaderboard.jpg" alt=""  style="max-width:60%; height:auto; float:right;" />
     </div>
     <div class="homeDiv">
         <img src="Images/homepageAbout.jpg" alt=""  style="max-width:60%; height:auto; float:left;" />
-        <a href="~/Menu.aspx" style="text-align:center; font-size: 36px; color:darkorange; float:right;">More about us</a>
+        <a href="~/Menu.aspx" style="text-align:center; font-size: 24px; color:#FF6900; font-family:Sigmar One; float:right;">About</a>
     </div>
 
 
