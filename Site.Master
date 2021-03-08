@@ -52,10 +52,10 @@
                 <div class="navbar-collapse collapse" >
                     <ul class="nav navbar-nav pull-right"  >
                         <li><a style="color:darkorange" runat="server" href="~/Menu">Menu</a></li>
-                        <li><a style="color:darkorange" runat="server" href="~/Leaderboard">Leaderboard</a></li>
                         <li><a style="color:darkorange" runat="server" href="~/About">About</a></li>
                         <li><a style="color:darkorange" runat="server" href="~/Contact">Contact</a></li>
-                       <!-- <li><a style="color:darkorange" runat="server" href="~/Signup">Sign Up</a></li>-->
+                        <li><a style="color:darkorange" runat="server" href="~/Leaderboard">Leaderboard</a></li>
+                        <li><a style="color:darkorange" runat="server" href="~/Signup">Sign Up</a></li>
                         <li><a style="color:darkorange" runat="server" href="~/Login">Login</a></li>
                     </ul>
                 </div>
