@@ -1,7 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WingSearch.aspx.cs" Inherits="Capstone.Backend.WingSearch" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <p>Wing Search</p>
+    <p>Wing Search</p> 
+
+    <%------------------------------ Return to Control Panel ---------------------------%>
+    <a href="~/Backend/ControlPanel.aspx" runat="server">Return to Control Panel</a>
+    <br />
+    <br />
+
+ 
+    
 
     <p>
 

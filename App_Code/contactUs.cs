@@ -14,6 +14,7 @@ namespace Capstone.App_Code
         private string contactName;
         private string contactEmail;
         private string contactMessage;
+        private string contactStatus;
         protected string feedback; //Shared between parent and child files only; intended to track error messages
         private int contactID;
 
@@ -106,6 +107,29 @@ namespace Capstone.App_Code
 
         }
 
+        public string ContactStatus
+        {
+            get
+            {
+                return contactStatus;
+            }
+            set
+            {
+                //Check for empty spaces
+#pragma warning disable CS0436 // Type conflicts with imported type
+                if (validation.dataEntered(value))
+#pragma warning restore CS0436 // Type conflicts with imported type
+                {
+                    contactStatus = value; //if the value isn't null, store it
+                }
+                else
+                {
+                    feedback += "\n <br> ERROR: Response required.";
+                }
+            }
+
+        }
+
         public string Feedback
         {
             get
@@ -125,6 +149,7 @@ namespace Capstone.App_Code
             contactName = "";
             contactEmail = "";
             contactMessage = "";
+            contactStatus = "";
             contactID = 0;
             feedback = "";
 
@@ -351,61 +376,65 @@ namespace Capstone.App_Code
 
 
         //--------------------------------------------------------- Delete A Record By ID ------------------------------------------------------------------------------
-      /*  public string DelectContact(int intContactID)
-        {
-            Int32 intRecords = 0;
-            string strResult = "";
+        /*  public string DelectContact(int intContactID)
+          {
+              Int32 intRecords = 0;
+              string strResult = "";
 
 
-            //Create and initialize DB tools
-            SqlConnection conn = new SqlConnection();
-            SqlCommand comm = new SqlCommand();
+              //Create and initialize DB tools
+              SqlConnection conn = new SqlConnection();
+              SqlCommand comm = new SqlCommand();
 
-            //Connect
-            string strConn = GetConnected();
+              //Connect
+              string strConn = GetConnected();
 
-            string sqlString = "DELETE from wingFlavors WHERE wingID = @wingID;";
+              string sqlString = "DELETE from wingFlavors WHERE wingID = @wingID;";
 
-            conn.ConnectionString = strConn;
+              conn.ConnectionString = strConn;
 
-            //Give command object the information it needs
-            comm.Connection = conn;
-            comm.CommandText = sqlString;
-            comm.Parameters.AddWithValue("wingID", intEwingID);
-
-
-            try
-            {
-                conn.Open();
-
-                //Run the deleted and store record effected
-                intRecords = comm.ExecuteNonQuery();
-                strResult = intRecords.ToString() + "Records deleted.";
-            }
-            catch (Exception err)
-            {
-                strResult = "ERROR: " + err.Message;
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return strResult;
-
-        }*/
+              //Give command object the information it needs
+              comm.Connection = conn;
+              comm.CommandText = sqlString;
+              comm.Parameters.AddWithValue("wingID", intEwingID);
 
 
+              try
+              {
+                  conn.Open();
 
+                  //Run the deleted and store record effected
+                  intRecords = comm.ExecuteNonQuery();
+                  strResult = intRecords.ToString() + "Records deleted.";
+              }
+              catch (Exception err)
+              {
+                  strResult = "ERROR: " + err.Message;
+              }
+              finally
+              {
+                  conn.Close();
+              }
+              return strResult;
+
+          }*/
+
+
+     
+ 
 
         //------------------------------------------------------------------ Update a Record In DB ------------------------------------------------------
-    /*    public string UpdateARecord()
+        public string UpdateARecord()
         {
             Int32 intRecords = 0;
             string strResult = "";
+             
 
 
             //Update SQL command string
-            string strSQL = "UPDATE wingFlavors SET wingName = @wingName, wingFlavor = @wingFlavor, wingDesc = @wingDesc, wingID = @wingID WHERE wingID = @wingID;";
+            string strSQL = "UPDATE contactUs SET contactStatus = @contactStatus WHERE contactID = @contactID;";
+
+            //string strSQL = "UPDATE contactUs SET contactName = @contactName, contactEmail = @contactEmail, contactMessage = @contactMessage, contactStatus = @contactStatus WHERE contactID = @contactID;";
 
             SqlConnection conn = new SqlConnection();
             string strConn = GetConnected();
@@ -418,10 +447,12 @@ namespace Capstone.App_Code
 
 
             //Fill in all perameters in the same order
-            comm.Parameters.AddWithValue("@WingName", WingName);
-            comm.Parameters.AddWithValue("@WingFlavor", WingFlavor);
-            comm.Parameters.AddWithValue("@WingDesc", WingDesc);
-            comm.Parameters.AddWithValue("@wingID", EwingID);
+            comm.Parameters.AddWithValue("@contactName", contactName);
+            comm.Parameters.AddWithValue("@contactEmail", contactEmail);
+            comm.Parameters.AddWithValue("@contactID", contactID);
+            comm.Parameters.AddWithValue("@contactMessage", contactMessage);
+            comm.Parameters.AddWithValue("@contactStatus", contactStatus);
+
 
 
             try
@@ -443,7 +474,7 @@ namespace Capstone.App_Code
 
             }
             return strResult;
-        }*/
+        }
 
     }
 }

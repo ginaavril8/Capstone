@@ -27,7 +27,7 @@
              <asp:BoundColumn DataField="contactName" HeaderText="Name" /> 
              <asp:BoundColumn DataField="contactEmail" HeaderText="Description" /> 
 
-             <asp:HyperLinkColumn Text="Edit" DataNavigateUrlFormatString="~/Backend/ContactUsAdmin.aspx?ContactID={0}" DataNavigateUrlField="contactID" /> 
+             <asp:HyperLinkColumn Text="View" DataNavigateUrlFormatString="~/Backend/ContactUsManager.aspx?ContactID={0}" DataNavigateUrlField="contactID" /> 
         </Columns>
 
     </asp:DataGrid>

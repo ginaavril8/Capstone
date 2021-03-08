@@ -6,17 +6,22 @@
         <h2>Control Panel</h2>
 
         <table>
-            <tr>
+           <!-- <tr>
                 <td><a href="WingManager.aspx" runat="server">Add</a></td>
-            </tr>  
+            </tr>  -->
          
             <tr>
-                <td><a href="WingSearch.aspx" runat="server">Search</a></td>
+                <td><a href="WingSearch.aspx" runat="server">Edit Wings</a></td> 
+                &nbsp;&nbsp;&nbsp;
             </tr>
+          
 
             <tr>
-                <td><a href="ContactUsAdmin.aspx" runat="server">Customer Fedback</a></td>
+                <td><a href="ContactUsAdmin.aspx" runat="server">Customer Feedback</a></td>
+                &nbsp;&nbsp;&nbsp;
             </tr>
+         
+
 
             <tr>
                 <td><asp:Button ID="btnLogout" runat="server" Text="Log Out" OnClick="btnLogout_Click" /></td>
