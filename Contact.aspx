@@ -3,6 +3,9 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+        <img src="Images/contactpage.jpg" alt="" style="max-width:100%; height:auto;" />
+    <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Contact Us</p>
     
     
 <table>

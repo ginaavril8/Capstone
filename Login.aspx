@@ -4,6 +4,11 @@
 
 <%-- Login Interface--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+    <img src="Images/memberloginpage.jpg" alt="" style="max-width:100%; height:auto;" />
+    <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Member login</p>
+
+
     <div>
         <h3><strong>Username:</strong></h3>
         <asp:TextBox ID="txtUsername" runat="server" />
