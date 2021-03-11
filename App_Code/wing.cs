@@ -22,14 +22,14 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (!validation.badWords(value))
+                //Check for empty space and "bad words"
+                if (validation.dataEntered(value) && !validation.badWords(value))
                 {
-                    wingName = value; //if the value does not contain bad words, store it
+                    wingName = value; //if everything is correct, store it
                 }
                 else
                 {
-                    feedback += "\n ERROR: Wing name contains an inappropiate word.";
+                    feedback += "\n <br> ERROR: Please enter an appropriate wing name.";
                 }
             }
 
@@ -43,14 +43,14 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (!validation.badWords(value))
+                //Check for empty space and "bad words"
+                if (validation.dataEntered(value) && !validation.badWords(value))
                 {
-                    wingFlavor = value; //if the value does not contain bad words, store it
+                    wingFlavor = value; //if the value isn't blank and it doesn't hav any "bad words", store it
                 }
                 else
                 {
-                    feedback += "\n ERROR: Wing flavor contains an inappropiate word.";
+                    feedback += "\n <br> ERROR: Please enter an appropriate wing flavor.";
                 }
             }
 
@@ -64,14 +64,14 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (!validation.badWords(value))
+                //Check for empty space and "bad words"
+                if (validation.dataEntered(value) && !validation.badWords(value))
                 {
-                    wingDesc = value; //if the value does not contain bad words, store it
+                    wingDesc = value; //if the value does not contain bad words and it isn't blank, store it
                 }
                 else
                 {
-                    feedback += "\n ERROR: Wing description contains an inappropiate word.";
+                    feedback += "\n <br> ERROR: Please enter an appropriate wing description.";
                 }
             }
 
@@ -82,7 +82,7 @@ namespace Capstone.App_Code
         {
             get
             {
-                return feedback; //Allows for outside code to see feedback 
+                return feedback; //Allows for outside code to see feedback -- communicate with front end if data entered is valid or not
             }
             set
             {
