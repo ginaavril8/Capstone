@@ -20,21 +20,22 @@
     <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Menu</p>
 
 
-    <!--    <p>
+
+     <%-------------------------------- Hidden Text Fields ------------------------------%>
+     <!--<p>
 
         Wing Name: <asp:TextBox ID="txtWingName" runat="server" Columns="30" />
         &nbsp; &nbsp; &nbsp; &nbsp;
         Description: <asp:TextBox ID="txtWingDesc" runat="server" Columns="30" />
-    </p>
-    -->
+    </p>-->
 
-    
 
 
 <div>
+
 <table>
 
-
+    <%--------------------------- Menu Database -------------------------------%>
     <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false" GridLines="None">
  
         <Columns>
@@ -49,14 +50,11 @@
 
 </table>
 
-     
-        
-</table>
-    </div>
+</div>
 
 
 
-    <%-- Display Menu  --%>
+    <%--------------------------- Display Menu Button -------------------------------%>
     <asp:Button ID="btnMenu" runat="server" Text="Load Menu"  OnLoad="btnMenu_Click" />
 
     <%--------------------------- Feedback Message -------------------------------%>

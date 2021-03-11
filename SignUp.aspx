@@ -1,12 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Capstone.SignUp" %>
 
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
  
 
-
+    <%--------------------------------- Img + Sign Up Text ------------------------------------%>
     <img src="Images/signuppage.jpg" alt="" style="max-width:100%; height:auto;" />
+
     <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Sign Up</p>
 
 
