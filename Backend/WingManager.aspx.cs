@@ -90,8 +90,7 @@ namespace Capstone.Backend
             else
             {
                 //Display info
-                lblFeedback.Text = temp.AddARecord();
-                //temp.Title + " by " + temp.AuthorFirst + " " + temp.AuthorLast;
+                lblFeedback.Text = temp.AddARecord(); 
 
             }
         }

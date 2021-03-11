@@ -6,6 +6,8 @@
 
     <%------------------------------ Return to Control Panel ---------------------------%>
     <a href="~/Backend/ControlPanel.aspx" runat="server">Return to Control Panel</a><br />
+     <a href="~/Backend/WingSearch.aspx" runat="server">Back to Search</a>
+    <br />
      
 
 

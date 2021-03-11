@@ -84,7 +84,7 @@ namespace Capstone.App_Code
                 Conn.Open();
                 //Phone or "dial" the DB
                 int intRecs = comm.ExecuteNonQuery();
-                strResult = $"SUCCESS: Inserted {intRecs} records."; //Report that DB accepted record 
+                strResult = $"SUCCESS: {intRecs} Wing Added."; //Report that DB accepted record 
                 Conn.Close();
             }
             catch (Exception err)
@@ -287,7 +287,7 @@ namespace Capstone.App_Code
 
                 //Run the deleted and store record effected
                 intRecords = comm.ExecuteNonQuery();
-                strResult = intRecords.ToString() + "Records deleted.";
+                strResult = intRecords.ToString() + " Wing Deleted.";
             }
             catch (Exception err)
             {
@@ -338,7 +338,7 @@ namespace Capstone.App_Code
                 conn.Open();
 
                 intRecords = comm.ExecuteNonQuery();
-                strResult = intRecords.ToString() + " Record Updated.";
+                strResult = intRecords.ToString() + " Wing Updated.";
                 conn.Close();
             }
             catch (Exception err)
