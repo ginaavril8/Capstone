@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WingSearch.aspx.cs" Inherits="Capstone.Backend.WingSearch" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <p>Wing Search</p> 
+    <p style="color:#FF6900">Wing Search</p> 
 
     <%------------------------------ Return to Control Panel ---------------------------%>
     <a href="~/Backend/ControlPanel.aspx" runat="server">Return to Control Panel</a>
@@ -11,7 +11,7 @@
  
     
 
-    <p>
+    <p style="color:#FF6900">
 
         Wing Name: <asp:TextBox ID="txtWingName" runat="server" Columns="30" />
         &nbsp; &nbsp; &nbsp; &nbsp;
@@ -20,7 +20,7 @@
 
     <br />
 
-    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
+    <asp:Button ID="btnSearch" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Search" OnClick="btnSearch_Click" />
 
     <br />
     <br />

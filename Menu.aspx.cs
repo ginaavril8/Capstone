@@ -41,6 +41,8 @@ namespace Capstone
             dgResults.DataSource = ds;
             dgResults.DataMember = ds.Tables[0].TableName;
             dgResults.DataBind();
+            btnMenu.Visible = false;
+            btnMenu.Enabled = false;
 
         }
     }

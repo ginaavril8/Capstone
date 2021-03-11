@@ -15,34 +15,34 @@
 
 <%-- First Name --%>
     <tr>
-        <td>First Name:</td>
+        <td style="color:#FF6900;">First Name:</td>
         <td><asp:TextBox ID="txtFirstName" runat="server" /></td>
     </tr>
              
                 
 <%-- Last Name --%>
     <tr>
-        <td>Last Name:</td>
+        <td style="color:#FF6900;">Last Name:</td>
         <td><asp:TextBox ID="txtLastName" runat="server" /></td>
     </tr>
 
 <%-- Username --%>
     <tr>
-        <td>Username:</td>
+        <td style="color:#FF6900;">Username:</td>
         <td><asp:TextBox ID="txtUserName" runat="server" /></td>
     </tr>
         
 
 <%-- Email --%>
     <tr>
-        <td>Email:</td>
+        <td style="color:#FF6900;">Email:</td>
         <td><asp:TextBox ID="txtEmail" runat="server"  /></td>
     </tr>
 
 
 <%-- Password --%>
     <tr>
-        <td>Password:</td>
+        <td style="color:#FF6900;">Password:</td>
         <td><asp:TextBox ID="txtUserPassword" TextMode="Password" runat="server" /></td>
     </tr>
 
@@ -50,8 +50,8 @@
 
 
     <%-- Sign up / Add to database --%>  
-
-        <asp:Button ID="signUpButton" runat="server" onClick="signUpButton_Click" Text="Sign Up" />
+    <br />
+        <asp:Button ID="signUpButton" BackColor="#FF6900" ForeColor="Black" runat="server" onClick="signUpButton_Click" Text="Sign Up" />
     <br />
     <br />
 

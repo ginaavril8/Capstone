@@ -21,6 +21,7 @@ namespace Capstone.Backend
                 Session["userName"] = txtUsername.Text;
                 Session["loginSuccessful"] = "TRUE";
                 lblFeedback.Text = "Login successful.";
+                Response.Redirect("ControlPanel.aspx");
             }
             else
             {

@@ -345,7 +345,7 @@ namespace Capstone.App_Code
                 conn.Open();
 
                 intRecords = comm.ExecuteNonQuery();
-                strResult = intRecords.ToString() + "Records Updated.";
+                strResult = intRecords.ToString() + " Records Updated.";
                 conn.Close();
             }
             catch (Exception err)

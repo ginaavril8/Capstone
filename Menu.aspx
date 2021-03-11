@@ -29,17 +29,19 @@
     -->
 
     
+
+
+<div>
 <table>
 
-    <%-------------------------------- Menu Grid ------------------------------%>
-    <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false" CssClass="DataGrid">
+
+    <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false" GridLines="None">
  
         <Columns>
 
-         
-             <asp:BoundColumn DataField="WingName" HeaderText="Name" /> 
-          
-             <asp:BoundColumn DataField="WingDesc" HeaderText="Description" /> 
+             <asp:BoundColumn DataField="WingName" ItemStyle-ForeColor="#FF6900" ItemStyle-Font-Size="20px"/> 
+               
+             <asp:BoundColumn DataField="WingDesc" ItemStyle-ForeColor="#FFE4C4" ItemStyle-Font-Size="18px"/> 
 
        </Columns>
  
@@ -47,13 +49,15 @@
 
 </table>
 
- 
+     
+        
+</table>
+    </div>
 
-    <%--------------------------- Display Menu  ----------------------------------%>
-    <asp:Button ID="btnMenu" runat="server" class="MenuButton"  Text="Load Menu" OnClick="btnMenu_Click" />
 
 
-
+    <%-- Display Menu  --%>
+    <asp:Button ID="btnMenu" runat="server" Text="Load Menu"  OnLoad="btnMenu_Click" />
 
     <%--------------------------- Feedback Message -------------------------------%>
     <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center;" />

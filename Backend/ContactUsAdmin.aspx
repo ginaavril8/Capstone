@@ -7,7 +7,7 @@
 
         <p>Customer Feedback</p>
 
-    <p>
+    <p style="color:#FF6900;">
 
         Name: <asp:TextBox ID="txtCustomerName" runat="server" Columns="30" />
         &nbsp; &nbsp; &nbsp; &nbsp;
@@ -16,7 +16,7 @@
 
     <br />
 
-    <asp:Button ID="btnFeedback" runat="server" Text="Display" OnClick="btnFeedback_Click" />
+    <asp:Button ID="btnFeedback" runat="server"  BackColor="#FF6900" ForeColor="Black" Text="Display" OnClick="btnFeedback_Click" />
 
     <br />
     <br />
