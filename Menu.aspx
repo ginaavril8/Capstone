@@ -13,20 +13,20 @@
     </p>
     -->
 
-
-
-
     
+
+
+<div>
 <table>
 
 
-    <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false">
+    <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false" GridLines="None">
  
         <Columns>
 
-             <asp:BoundColumn DataField="WingName" HeaderText="Name" /> 
+             <asp:BoundColumn DataField="WingName" ItemStyle-ForeColor="#FF6900" ItemStyle-Font-Size="20px"/> 
                
-             <asp:BoundColumn DataField="WingDesc" HeaderText="Description" /> 
+             <asp:BoundColumn DataField="WingDesc" ItemStyle-ForeColor="#FFE4C4" ItemStyle-Font-Size="18px"/> 
 
  
             
@@ -40,6 +40,7 @@
      
         
 </table>
+    </div>
 
  
 

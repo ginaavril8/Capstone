@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div>
 
-        <h2>Control Panel</h2>
+        <h2 style="color:#FF6900">Control Panel</h2>
 
         <table>
            <!-- <tr>
@@ -11,20 +11,20 @@
             </tr>  -->
          
             <tr>
-                <td><a href="WingSearch.aspx" runat="server">Edit Wings</a></td> 
+                <td style="color:#FF6900"><a href="WingSearch.aspx" runat="server">Edit Wings</a></td> 
                 &nbsp;&nbsp;&nbsp;
             </tr>
           
 
             <tr>
-                <td><a href="ContactUsAdmin.aspx" runat="server">Customer Feedback</a></td>
+                <td style="color:#FF6900"><a href="ContactUsAdmin.aspx" runat="server">Customer Feedback</a></td>
                 &nbsp;&nbsp;&nbsp;
             </tr>
          
 
-
+            
             <tr>
-                <td><asp:Button ID="btnLogout" runat="server" Text="Log Out" OnClick="btnLogout_Click" /></td>
+                <td><asp:Button ID="btnLogout" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Log Out" OnClick="btnLogout_Click" /></td>
             </tr>
 
         </table>

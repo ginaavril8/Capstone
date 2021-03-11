@@ -10,7 +10,7 @@
      
 
         <%------------------------------ Wing Management Table ---------------------------%>
-    <table>
+    <table style="color:#FF6900;">
 
     <%-- Contact ID--%>
     <tr>
@@ -48,11 +48,11 @@
 
     <%-- Add note to a contact message --%>
 
-    <asp:Button ID="btnUpdateContactMsg" runat="server" Text="Update" OnClick="btnUpdateContactMsg_Click" />
+    <asp:Button ID="btnUpdateContactMsg" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Update" OnClick="btnUpdateContactMsg_Click" />
 
    <%-- Cancle Button --%>
             <br />
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+    <asp:Button ID="btnCancel" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Cancel" OnClick="btnCancel_Click" />
 
     <%-- Feedback Label--%>
 

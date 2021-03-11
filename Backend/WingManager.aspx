@@ -2,7 +2,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <p>Wing Management</p>
+    <p style="color:#FF6900">Wing Management</p>
 
     <%------------------------------ Return to Control Panel ---------------------------%>
     <a href="~/Backend/ControlPanel.aspx" runat="server">Return to Control Panel</a><br />
@@ -16,24 +16,24 @@
 
     <%-- Wing ID--%>
     <tr>
-        <td>Wing ID</td>
+        <td style="color:#FF6900;">Wing ID</td>
         <td><asp:Label ID="lblWingID" runat="server"  /></td>
     </tr>
 
     <%-- Wing Name --%>
     <tr>
-        <td>Wing Name</td>
+        <td style="color:#FF6900;">Wing Name</td>
         <td><asp:Textbox ID="txtWingName" runat="server" MaxLength="255" /></td>
     </tr>
 
     <%-- Wing Information --%>
     <tr>
-        <td>Wing Flavor(s)</td>
+        <td style="color:#FF6900;">Wing Flavor(s)</td>
         <td><asp:Textbox ID="txtWingFlavor" runat="server" MaxLength="50" /></td>
     </tr>
 
     <tr>
-        <td>Wing Description</td>
+        <td style="color:#FF6900;">Wing Description</td>
         <td><asp:Textbox ID="txtWingDesc" runat="server" MaxLength="200" /></td>
     </tr>
 
@@ -44,7 +44,7 @@
                <%-- Add Wing Button (to Database) --%>
             <br />
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
+            <asp:Button ID="btnAdd" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Add" OnClick="btnAdd_Click" />
 
                 <%-- Delete Button --%>
             <br />
@@ -52,7 +52,7 @@
             <br /> 
 
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
+            <asp:Button ID="btnDelete" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Delete" OnClick="btnDelete_Click" />
 
                <%-- Update Button --%>
             <br />
@@ -60,21 +60,21 @@
             <br /> 
 
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
+            <asp:Button ID="btnUpdate" runat="server"  BackColor="#FF6900" ForeColor="Black" Text="Update" OnClick="btnUpdate_Click" />
 
-               <%-- Cancle Button --%>
+               <%-- Cancel Button --%>
             <br />
             <br />
             <br /> 
  
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+            <asp:Button ID="btnCancel" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Cancel" OnClick="btnCancel_Click" />
 
     <%-- Feedback Label--%>
     <br />
     <br />
 
-    <asp:Label ID="lblFeedback" runat="server" />
+    <asp:Label ID="lblFeedback" ForeColor="#FF6900" runat="server" />
 
 
  
