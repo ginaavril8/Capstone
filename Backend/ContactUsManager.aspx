@@ -7,6 +7,8 @@
     
     <%------------------------------ Return to Control Panel ---------------------------%>
     <a href="~/Backend/ControlPanel.aspx" runat="server">Return to Control Panel</a><br />
+    <a href="~/Backend/ContactUsAdmin.aspx" runat="server">Back to Comments</a><br />
+ 
      
 
         <%------------------------------ Wing Management Table ---------------------------%>
@@ -39,8 +41,8 @@
 
    <%-- Admin Response --%>
      <tr>
-        <td>Response</td>
-        <td><asp:Textbox ID="txtContactStatus" runat="server" MaxLength="200" /></td>
+        <td>Staff Notes: </td>
+        <td><asp:Textbox ID="txtContactStatus" runat="server"  TextMode="MultiLine" Width="300px" Height="90px"  /></td>
     </tr>
 
         
@@ -51,11 +53,16 @@
     <asp:Button ID="btnUpdateContactMsg" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Update" OnClick="btnUpdateContactMsg_Click" />
 
    <%-- Cancle Button --%>
+            <br /> 
             <br />
+            <br /> 
     <asp:Button ID="btnCancel" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Cancel" OnClick="btnCancel_Click" />
+            <br />
+            <br />
+            <br /> 
+
 
     <%-- Feedback Label--%>
-
     <asp:Label ID="lblFeedback" runat="server" />
 
 

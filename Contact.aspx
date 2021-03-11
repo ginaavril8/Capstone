@@ -11,28 +11,29 @@
 <table>
 
 
-<%-- First Name --%>
+    <%--------------------------------- First Name ------------------------------------%>
     <tr> 
         <td><asp:TextBox ID="txtContactName" runat="server" Text="Name" Width="400px" /></td>
     </tr>
              
                 
-<%-- Email --%>
+    <%----------------------------------- Email --------------------------------------%>
     <tr> 
         <td><asp:TextBox ID="txtContactEmail" runat="server" Text="Email" Width="400px" /></td>
     </tr>
 
-<%-- Comment --%>
+    <%----------------------------------- Comment --------------------------------------%>
     <tr> 
-        <td><asp:TextBox ID="txtContactMessage" runat="server" TextMode="MultiLine" Width="400px" Height="200px" Text="Comments" /></td>
+        <td><asp:TextBox ID="txtContactMessage" runat="server" TextMode="MultiLine" Width="400px" Height="200px" Text="Comment" /></td>
     </tr>
         
 
 </table>
 
-    <%-- Submit comment --%>  
-
+    <%----------------------------------- Submit comment --------------------------------------%>  
     <asp:Button ID="btnContact" BackColor="#FF6900" ForeColor="Black" runat="server" text="Contact" OnClick="btnContact_Click" />
+
+    <%-------------------------------------- Feedback ----------------------------------------%>  
     <asp:Label ID="lblFeedback" runat="server" />
 
 </asp:Content>

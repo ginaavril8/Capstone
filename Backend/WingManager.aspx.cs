@@ -52,21 +52,6 @@ namespace Capstone.Backend
                 }
             }
 
-            /*if (Request.QueryString["wingID"] != null)
-            {
-                btnAdd.Visible = false;
-                btnAdd.Enabled = false;
-            }
-            else
-            {
-                btnDelete.Visible = false;
-                btnUpdate.Visible = false;
-                btnDelete.Visible = false;
-                btnUpdate.Visible = false;
-
-            }
-        }*/
-
     }
     
 

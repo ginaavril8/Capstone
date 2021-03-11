@@ -19,7 +19,7 @@ textarea {
     max-width: 280px;
 }
 
-/* Responsive: Portrait tablets and up */
+/* Responsive: Portrait tablets and up 
 @media screen and (min-width: 768px) {
     .jumbotron {
         margin-top: 20px;
@@ -28,6 +28,23 @@ textarea {
     .body-content {
         padding: 0;
     }
+}
+*/
+
+
+@media screeen and (min-width: 412px){
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+    
+    .footer-div {
+        padding:10px;
+    }
+
 }
 
 

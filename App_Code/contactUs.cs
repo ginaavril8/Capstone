@@ -196,8 +196,7 @@ namespace Capstone.App_Code
             {
                 Conn.Open();
                 //Phone or "dial" the DB
-                int intRecs = comm.ExecuteNonQuery();
-                //strResult = $"SUCCESS: Inserted {intRecs} records."; //Report that DB accepted record 
+                int intRecs = comm.ExecuteNonQuery(); 
                 strResult = $"<br> Sent!"; //Report that DB accepted record 
                 Conn.Close();
             }
@@ -333,9 +332,7 @@ namespace Capstone.App_Code
             conn.Open(); 
 
             dr = comm.ExecuteReader();
-
-            //Close connection "Hang up the Phone"
-            // conn.Close(); <-- don't do this, it'll destory the connection 
+             
 
             //Return the data
             return dr;
@@ -373,50 +370,6 @@ namespace Capstone.App_Code
         }
 
 
-
-        //--------------------------------------------------------- Delete A Record By ID ------------------------------------------------------------------------------
-        /*  public string DelectContact(int intContactID)
-          {
-              Int32 intRecords = 0;
-              string strResult = "";
-
-
-              //Create and initialize DB tools
-              SqlConnection conn = new SqlConnection();
-              SqlCommand comm = new SqlCommand();
-
-              //Connect
-              string strConn = GetConnected();
-
-              string sqlString = "DELETE from wingFlavors WHERE wingID = @wingID;";
-
-              conn.ConnectionString = strConn;
-
-              //Give command object the information it needs
-              comm.Connection = conn;
-              comm.CommandText = sqlString;
-              comm.Parameters.AddWithValue("wingID", intEwingID);
-
-
-              try
-              {
-                  conn.Open();
-
-                  //Run the deleted and store record effected
-                  intRecords = comm.ExecuteNonQuery();
-                  strResult = intRecords.ToString() + "Records deleted.";
-              }
-              catch (Exception err)
-              {
-                  strResult = "ERROR: " + err.Message;
-              }
-              finally
-              {
-                  conn.Close();
-              }
-              return strResult;
-
-          }*/
 
 
      
@@ -459,7 +412,7 @@ namespace Capstone.App_Code
                 conn.Open();
 
                 intRecords = comm.ExecuteNonQuery();
-                strResult = intRecords.ToString() + " Records Updated.";
+                strResult = intRecords.ToString() + " Response Added.";
                 conn.Close();
             }
             catch (Exception err)

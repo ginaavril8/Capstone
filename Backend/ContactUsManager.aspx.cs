@@ -33,6 +33,8 @@ namespace Capstone.Backend
                     lblContactName.Text = dr["contactName"].ToString();
                     lblContactMessage.Text = dr["contactMessage"].ToString();
                     lblContactEmail.Text = dr["contactEmail"].ToString();
+                    txtContactStatus.Text = dr["contactStatus"].ToString();
+                     
 
 
                 }
@@ -40,6 +42,8 @@ namespace Capstone.Backend
 
         }
 
+
+        //When admin clicks the update button, their comment will be added to the database for other employees to see
         protected void btnUpdateContactMsg_Click(object sender, EventArgs e)
         {
 
@@ -50,7 +54,6 @@ namespace Capstone.Backend
             //Form
             temp.ContactStatus = txtContactStatus.Text;
             
-
 
             if (temp.Feedback.Contains("ERROR:"))
             {

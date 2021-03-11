@@ -2,32 +2,39 @@
 
 
 
-<%-- Login Interface--%>
+<%-------------------------------- Login Interface ------------------------------------%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <img src="Images/memberloginpage.jpg" alt="" style="max-width:100%; height:auto;" />
+
+
     <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Member login</p>
 
+    <table>
 
-    <div>
-        <h3 style="color:#FF6900"><strong>Username:</strong></h3>
-        <asp:TextBox ID="txtUsername" runat="server" />
 
-        <br />
-        <br />
+        <tr>
+        <%-------------------------------- Username ------------------------------------%>
+        <td style="color:#FF6900;">Username:</td>
+        <td><asp:TextBox ID="txtUsername" runat="server" /></td>
+        </tr>
 
-        <h3 style="color:#FF6900"><strong>Password:</strong></h3>
-        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"/>
+        <tr>
+        <%-------------------------------- Password ------------------------------------%>
+        <td style="color:#FF6900;">Password:</td>
+        <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /></td>
+        </tr>
 
-        <br />
-        <br />
+    </table>
 
+    
+        <%-------------------------------- Login button ------------------------------------%>
         <asp:Button ID="loginButton" BackColor="#FF6900" ForeColor="Black" runat="server" onClick="loginButton_Click" Text="Login" />
 
-        <br />
-        <br />
-
         <asp:Label ID="lblFeedback" ForeColor="#FF6900" runat="server" Text="" />
-    </div>
+ 
+
+
+
 
 </asp:Content>

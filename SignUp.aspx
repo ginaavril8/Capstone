@@ -13,34 +13,35 @@
 <table>
 
 
-<%-- First Name --%>
+<%--------------------------------- First Name ------------------------------------%>
     <tr>
         <td style="color:#FF6900;">First Name:</td>
         <td><asp:TextBox ID="txtFirstName" runat="server" /></td>
     </tr>
              
                 
-<%-- Last Name --%>
+<%--------------------------------- Last Name ------------------------------------%>
     <tr>
         <td style="color:#FF6900;">Last Name:</td>
         <td><asp:TextBox ID="txtLastName" runat="server" /></td>
     </tr>
 
-<%-- Username --%>
+<%-------------------------------- Username ------------------------------------%>
     <tr>
         <td style="color:#FF6900;">Username:</td>
         <td><asp:TextBox ID="txtUserName" runat="server" /></td>
     </tr>
         
 
-<%-- Email --%>
+<%-------------------------------- Email ------------------------------------%>
     <tr>
         <td style="color:#FF6900;">Email:</td>
         <td><asp:TextBox ID="txtEmail" runat="server"  /></td>
+       
     </tr>
 
 
-<%-- Password --%>
+<%-------------------------------- Password ------------------------------------%>
     <tr>
         <td style="color:#FF6900;">Password:</td>
         <td><asp:TextBox ID="txtUserPassword" TextMode="Password" runat="server" /></td>
@@ -49,12 +50,13 @@
 </table>
 
 
-    <%-- Sign up / Add to database --%>  
+    <%-------------------------------- Sign up / Add to database ------------------------------------%> 
     <br />
         <asp:Button ID="signUpButton" BackColor="#FF6900" ForeColor="Black" runat="server" onClick="signUpButton_Click" Text="Sign Up" />
     <br />
     <br />
 
+     <%-------------------------------- Feedback ------------------------------------%> 
         <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center;" />
  
 </asp:Content>
