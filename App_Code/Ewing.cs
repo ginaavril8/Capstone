@@ -60,8 +60,7 @@ namespace Capstone.App_Code
             //Initialize it's properties
             Conn.ConnectionString = @GetConnected(); //Set who/what/where of DB
 
-            string strSQL = "INSERT INTO wingFlavors (wingName, wingFlavor, wingDesc) VALUES (@wingName, @wingFlavor, @wingDesc)";
-            //string strSQL = "INSERT INTO wingFlavors (wingName, wingFlavor, wingDesc, wingID) VALUES (@wingName, @wingFlavor, @wingDesc, @wingID)";
+            string strSQL = "INSERT INTO wingFlavors (wingName, wingFlavor, wingDesc) VALUES (@wingName, @wingFlavor, @wingDesc)"; 
 
 
             //Send out command
@@ -313,8 +312,7 @@ namespace Capstone.App_Code
 
             //Update SQL command string
             string strSQL = "UPDATE wingFlavors SET wingName = @wingName, wingFlavor = @wingFlavor, wingDesc = @wingDesc WHERE wingID = @wingID;";
-
-            //string strSQL = "UPDATE wingFlavors SET wingName = @wingName, wingFlavor = @wingFlavor, wingDesc = @wingDesc, wingID = @wingID WHERE wingID = @wingID;";
+  
 
             SqlConnection conn = new SqlConnection();
             string strConn = GetConnected();

@@ -55,6 +55,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, display error message
                     feedback += "\n <br> ERROR: Please enter a valid name.";
                 }
             }
@@ -78,6 +79,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, display error message
                     feedback += "\n <br> ERROR: Please enter a valid email.";
                 }
             }
@@ -101,6 +103,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, display error message
                     feedback += "\n <br> ERROR: Let us know what's on your mind!";
                 }
             }
@@ -124,6 +127,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, display error message
                     feedback += "\n <br> ERROR: Response required.";
                 }
             }
@@ -386,7 +390,7 @@ namespace Capstone.App_Code
             //Update SQL command string
             string strSQL = "UPDATE contactUs SET contactStatus = @contactStatus WHERE contactID = @contactID;";
 
-            //string strSQL = "UPDATE contactUs SET contactName = @contactName, contactEmail = @contactEmail, contactMessage = @contactMessage, contactStatus = @contactStatus WHERE contactID = @contactID;";
+    
 
             SqlConnection conn = new SqlConnection();
             string strConn = GetConnected();

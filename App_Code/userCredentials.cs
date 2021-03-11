@@ -9,6 +9,7 @@ using Capstone.App_Code;
 
 namespace Capstone.App_Code
 {
+
     public class userCredentials
     {
         private string firstName;
@@ -36,6 +37,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, send an error message
                     feedback += "\n <br> ERROR: Please enter a valid name.";
                 }
             }
@@ -57,6 +59,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, send an error message
                     feedback += "\n <br> ERROR: Please enter a last name.";
                 }
             }
@@ -80,6 +83,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, send an error message
                     feedback += "\n <br> ERROR: Please enter a username.";
                 }
             }
@@ -101,6 +105,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, send an error message
                     feedback += "\n <br> ERROR: Please enter a valid email.";
                 }
             }
@@ -123,6 +128,7 @@ namespace Capstone.App_Code
                 }
                 else
                 {
+                    //Otherwise, send an error message
                     feedback += "\n <br> ERROR: Please enter a valid password.";
                 }
             }
@@ -155,6 +161,7 @@ namespace Capstone.App_Code
             }
             set
             {
+               
                 feedback = value;
             }
         }
@@ -204,7 +211,7 @@ namespace Capstone.App_Code
             //Bark out command
             SqlCommand comm = new SqlCommand();
             comm.CommandText = strSQL; //Commander knows what to say
-            comm.Connection = Conn; //Where is the phone? Right here.
+            comm.Connection = Conn; // = Phone
 
 
             //Fill in all perameters in the same order
@@ -214,7 +221,7 @@ namespace Capstone.App_Code
             comm.Parameters.AddWithValue("@userPassword", userPassword);
             comm.Parameters.AddWithValue("@userEmail", userEmail);
             comm.Parameters.AddWithValue("@wingTally", wingTally);
-            // comm.Parameters.AddWithValue("@userID", EwingID);
+       
 
 
 
@@ -224,8 +231,7 @@ namespace Capstone.App_Code
             {
                 Conn.Open();
                 //Phone or "dial" the DB
-                int intRecs = comm.ExecuteNonQuery();
-                //strResult = $"SUCCESS: Inserted {intRecs} records."; //Report that DB accepted record 
+                int intRecs = comm.ExecuteNonQuery(); 
                 strResult = $"<br> Welcome!"; //Report that DB accepted record 
                 Conn.Close();
             }
