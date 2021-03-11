@@ -80,8 +80,8 @@
         </div>
 
         <div class="footer-div">
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Capstone</p>
+            <footer style="text-align:center; padding:20px; margin:10px;">
+                <p>&copy; <%: DateTime.Now.Year %> | The Boneyard | Capstone</p>
             </footer>
         </div>
 
