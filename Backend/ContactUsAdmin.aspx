@@ -8,13 +8,13 @@
     <p>Customer Feedback</p>
 
     <p style="color:#FF6900;">
-        <!-------------------------------- Name Search -------------------------------------->
-        Name: <asp:TextBox ID="txtCustomerName" runat="server" Columns="30" />
-        <br />
-        <br />
+    <!-------------------------------- Name Search -------------------------------------->
+    Name: <asp:TextBox ID="txtCustomerName" runat="server" Columns="30" />
+    <br />
+    <br />
       
-        <!-------------------------------- Email Search -------------------------------------->
-        Email: <asp:TextBox ID="txtCustomerEmail" runat="server" Columns="30" />
+    <!-------------------------------- Email Search -------------------------------------->
+    Email: <asp:TextBox ID="txtCustomerEmail" runat="server" Columns="30" />
     </p>
 
     <br />
@@ -23,7 +23,7 @@
     <br />
     <br />
 
-    <!-------------------------------- Search Results -------------------------------------->
+    <!-------------------------------- Search Results ----------------------------------->
     <asp:DataGrid ID="dgResults" runat="server" AutoGenerateColumns="false">
 
         <Columns>

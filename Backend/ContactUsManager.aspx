@@ -11,35 +11,35 @@
  
      
 
-        <%------------------------------ Wing Management Table ---------------------------%>
+    <%------------------------------ Wing Management Table -----------------------------%>
     <table style="color:#FF6900;">
 
-    <%-- Contact ID--%>
+    <%---------------------------------- Contact ID ------------------------------------%>
     <tr>
         <td>Contact ID</td>
         <td><asp:Label ID="lblContactID" runat="server"  /></td>
     </tr>
 
-    <%-- Contact Name --%>
+    <%------------0----------------------- Contact Name --------------------------------%>
      <tr>
          <td>Customer Name: </td>
          <td><asp:Label ID="lblContactName" runat="server" /></td>
      </tr>
 
-        <%-- Email --%>
+    <%---------------------------------- Email --------------------------------------%>
     <tr>
         <td>Email: </td>
         <td><asp:Label ID="lblContactEmail" runat="server" /></td>
     </tr>
 
 
-    <%-- Message --%>
+    <%---------------------------------- Message ------------------------------------%>
     <tr>
         <td>Comment: </td>
         <td><asp:Label ID="lblContactMessage" runat="server" /></td>
     </tr>
 
-   <%-- Admin Response --%>
+   <%--------------------------------- Admin Response --------------------------------%>
      <tr>
         <td>Staff Notes: </td>
         <td><asp:Textbox ID="txtContactStatus" runat="server"  TextMode="MultiLine" Width="300px" Height="90px"  /></td>
@@ -48,11 +48,11 @@
         
     </table>
 
-    <%-- Add note to a contact message --%>
+    <%----------------------------- Add note to a contact message ------------------------%>
 
     <asp:Button ID="btnUpdateContactMsg" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Update" OnClick="btnUpdateContactMsg_Click" />
 
-   <%-- Cancle Button --%>
+   <%----------------------------- Cancle Button ---------------------------%>
             <br /> 
             <br />
             <br /> 
@@ -62,7 +62,7 @@
             <br /> 
 
 
-    <%-- Feedback Label--%>
+    <%----------------------------- Feedback Label ------------------------%>
     <asp:Label ID="lblFeedback" runat="server" />
 
 
