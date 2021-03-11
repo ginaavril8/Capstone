@@ -36,7 +36,6 @@ namespace Capstone.App_Code
 
  
         //Utility function -- controls all SQL Server login info
-
         private string GetConnected()
         {
             return @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE245_GMartin;User Id=SE245_GMartin;Password=008003563;";
@@ -45,10 +44,7 @@ namespace Capstone.App_Code
         //Default Constructor
         public Ewing() : base() //Calls the parents constructor
         {
-            // BookmarkPage = 0;
-            // dateRentalExpires = DateTime.Now.AddDays(14);
             ewingID = 0;
-
         }
 
 
@@ -68,10 +64,10 @@ namespace Capstone.App_Code
             //string strSQL = "INSERT INTO wingFlavors (wingName, wingFlavor, wingDesc, wingID) VALUES (@wingName, @wingFlavor, @wingDesc, @wingID)";
 
 
-            //Bark out command
+            //Send out command
             SqlCommand comm = new SqlCommand();
             comm.CommandText = strSQL; //Commander knows what to say
-            comm.Connection = Conn; //Where is the phone? Right here.
+            comm.Connection = Conn; // = Phone 
 
 
             //Fill in all perameters in the same order
@@ -83,7 +79,6 @@ namespace Capstone.App_Code
 
 
             //Attempt connection to the server
-
             try
             {
                 Conn.Open();
@@ -117,10 +112,10 @@ namespace Capstone.App_Code
             //Create a command for SQL statement
             SqlCommand comm = new SqlCommand();
 
-            //Write a select statement to perform the search
+            //Write a SQL select statement to perform the search in DB
             String strSQL = "SELECT wingID, wingName, wingDesc FROM wingFlavors WHERE 0=0";
 
-            //If first/last name is filled in, include it as search critera
+            //If wing name/wing description is filled in, include it as search critera
             if (strWingName.Length > 0)
             {
                 strSQL += "AND wingName LIKE @wingName";
@@ -220,12 +215,9 @@ namespace Capstone.App_Code
 
             //Open connection "Pick up the Phone"
             conn.Open();
-
-            //Fill dataset with results from database and call it with :EBooks_Temp"
+             
             dr = comm.ExecuteReader();
-
-            //Close connection "Hang up the Phone"
-            // conn.Close(); <-- don't do this, it'll destory the connection 
+             
 
             //Return the data
             return dr;
@@ -244,6 +236,7 @@ namespace Capstone.App_Code
 
             string strConn = GetConnected();
 
+            //SQL statement; select everything from wingFlavors table
             string sqlString = "SELECT * FROM wingFlavors WHERE wingID = @wingID;";
 
             conn.ConnectionString = strConn;
@@ -277,6 +270,7 @@ namespace Capstone.App_Code
             //Connect
             string strConn = GetConnected();
 
+            //SQL delete statement from wingFlavors; specific record
             string sqlString = "DELETE from wingFlavors WHERE wingID = @wingID;";
 
             conn.ConnectionString = strConn;
@@ -335,8 +329,7 @@ namespace Capstone.App_Code
             //Fill in all perameters in the same order
             comm.Parameters.AddWithValue("@WingName", WingName);
             comm.Parameters.AddWithValue("@WingFlavor", WingFlavor);
-            comm.Parameters.AddWithValue("@WingDesc", WingDesc);
-            //comm.Parameters.AddWithValue("@wingID", intWingID);
+            comm.Parameters.AddWithValue("@WingDesc", WingDesc); 
             comm.Parameters.AddWithValue("@wingID", EwingID);
             
 
@@ -345,7 +338,7 @@ namespace Capstone.App_Code
                 conn.Open();
 
                 intRecords = comm.ExecuteNonQuery();
-                strResult = intRecords.ToString() + " Records Updated.";
+                strResult = intRecords.ToString() + " Record Updated.";
                 conn.Close();
             }
             catch (Exception err)

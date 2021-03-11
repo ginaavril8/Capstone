@@ -16,7 +16,7 @@
     
     <p style="text-align:center; font-size: 24px; color:#FFE4C4; font-family:Roboto;">The Boneyard was founded in 2021 by head chef and master of hot sauces, Frank Redhot. Frank’s passion for creating new and exciting hot sauces led him to open The Boneyard wing bar. The Boneyard is not a real restaurant, and is part of a Capstone project for NEIT.</p>
 
-    <h3>Testing css</h3>
+  
 
 </asp:Content>
 

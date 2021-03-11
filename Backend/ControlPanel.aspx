@@ -6,22 +6,18 @@
         <h2 style="color:#FF6900">Control Panel</h2>
 
         <table>
-           <!-- <tr>
-                <td><a href="WingManager.aspx" runat="server">Add</a></td>
-            </tr>  -->
+ 
+            <tr>
+                <td style="color:#FF6900"><a href="WingSearch.aspx" runat="server">Edit Wings<br /></a></td> 
+     
+            </tr>
+      
          
             <tr>
-                <td style="color:#FF6900"><a href="WingSearch.aspx" runat="server">Edit Wings</a></td> 
-                &nbsp;&nbsp;&nbsp;
+                <td style="color:#FF6900"><a href="ContactUsAdmin.aspx" runat="server">Customer Feedback<br /></a></td>
+            
             </tr>
-          
-
-            <tr>
-                <td style="color:#FF6900"><a href="ContactUsAdmin.aspx" runat="server">Customer Feedback</a></td>
-                &nbsp;&nbsp;&nbsp;
-            </tr>
-         
-
+           
             
             <tr>
                 <td><asp:Button ID="btnLogout" runat="server" BackColor="#FF6900" ForeColor="Black" Text="Log Out" OnClick="btnLogout_Click" /></td>

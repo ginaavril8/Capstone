@@ -30,9 +30,9 @@ namespace Capstone.App_Code
             set
             {
                 //Check for empty spaces
-                if (validation.dataEntered(value))
+                if (validation.dataEntered(value) && !validation.badWords(value))
                 {
-                    firstName = value; //if the value does not contain bad words, store it
+                    firstName = value; //if the value isn't blank, store it
                 }
                 else
                 {
@@ -50,10 +50,10 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (validation.dataEntered(value))
+                //Check for empty spaces
+                if (validation.dataEntered(value) && !validation.badWords(value))
                 {
-                    lastName = value; //if the value does not contain bad words, store it
+                    lastName = value; //if the value isn't blank, store it
                 }
                 else
                 {
@@ -73,10 +73,10 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (validation.dataEntered(value))
+                //Check for empty spaces
+                if (validation.dataEntered(value) && !validation.badWords(value))
                 {
-                    userName = value; //if the value does not contain bad words, store it
+                    userName = value; //if the value isn't blank, store it
                 }
                 else
                 {
@@ -94,10 +94,10 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
+                //Check for valid email
                 if (validation.validateEmail(value))
                 {
-                    userEmail = value; //if the value does not contain bad words, store it
+                    userEmail = value; //if the email is in correct format, store it
                 }
                 else
                 {
@@ -116,10 +116,10 @@ namespace Capstone.App_Code
             }
             set
             {
-                //check for bad words
-                if (!validation.badWords(value)) //-----------------------------------------------------------------------------> FIX THIS to match validation
+                //Check for empty spaces
+                if (validation.dataEntered(value)) 
                 {
-                    userPassword = value; //if the value does not contain bad words, store it
+                    userPassword = value; //if the value isn't blank, store it
                 }
                 else
                 {

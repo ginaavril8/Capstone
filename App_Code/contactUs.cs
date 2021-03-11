@@ -178,13 +178,13 @@ namespace Capstone.App_Code
             string strSQL = "INSERT INTO contactUs (contactName, contactEmail, contactMessage) VALUES (@contactName, @contactEmail, @contactMessage)";
 
 
-            //Bark out command
+            //Send out command
             SqlCommand comm = new SqlCommand();
             comm.CommandText = strSQL; //Commander knows what to say
             comm.Connection = Conn; //Where is the phone? Right here.
 
 
-            //Fill in all perameters in the same order
+            //Fill in all perameters in the same order as initilization
             comm.Parameters.AddWithValue("@contactName", contactName);
             comm.Parameters.AddWithValue("@contactEmail", contactEmail);
             comm.Parameters.AddWithValue("@contactMessage", contactMessage); 
@@ -192,7 +192,6 @@ namespace Capstone.App_Code
 
 
             //Attempt connection to the server
-
             try
             {
                 Conn.Open();
@@ -228,7 +227,7 @@ namespace Capstone.App_Code
             //Create a command for SQL statement
             SqlCommand comm = new SqlCommand();
 
-            //Write a select statement to perform the search
+            //SQL select statement to perform the search in DB
             String strSQL = "SELECT contactName, contactEmail, contactMessage, contactID FROM contactUs WHERE 0=0";
             //ADDED contactID ^
 
@@ -295,7 +294,7 @@ namespace Capstone.App_Code
             //Create a command for SQL statement
             SqlCommand comm = new SqlCommand();
 
-            //Write a select statement to preform search
+            //Write a select statement to preform search in DB
             string strSQL = "SELECT contactName, contactEmail, contactMessage FROM contactUs WHERE 0=0";
 
             //If name is filled in, include it as search critera
@@ -331,9 +330,8 @@ namespace Capstone.App_Code
             //--------------------------------------------------------- Get Data | DR ------------------------------------------------------------------------------
 
             //Open connection "Pick up the Phone"
-            conn.Open();
+            conn.Open(); 
 
-            //Fill dataset with results from database and call it with :EBooks_Temp"
             dr = comm.ExecuteReader();
 
             //Close connection "Hang up the Phone"
@@ -356,6 +354,7 @@ namespace Capstone.App_Code
 
             string strConn = GetConnected();
 
+            //Select SQL statement will select and display everything in DB for contactUs table
             string sqlString = "SELECT * FROM contactUs WHERE contactID = @contactID;";
 
             conn.ConnectionString = strConn;

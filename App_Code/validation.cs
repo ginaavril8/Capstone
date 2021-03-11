@@ -16,7 +16,7 @@ namespace Capstone.App_Code
         {
             bool result = false;
 
-            string[] strBadWords = { "yuck", "lame", "disgusting", "gross", "ew"};
+            string[] strBadWords = {"blah", "idk", "abcdefg", ".", "1234"};
 
             foreach (string strBW in strBadWords)
                 if (temp.Contains(strBW))
