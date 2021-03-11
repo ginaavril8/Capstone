@@ -44,7 +44,7 @@
  
 
     <%-- Display Menu  --%>
-    <asp:Button ID="btnMenu" runat="server" Text="Load Menu" OnClick="btnMenu_Click" />
+    <asp:Button ID="btnMenu" runat="server" Text="Load Menu"  OnLoad="btnMenu_Click" />
 
     <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center;" />
 

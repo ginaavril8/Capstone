@@ -32,7 +32,7 @@
 
     <%-- Submit comment --%>  
 
-    <asp:Button ID="btnContact" runat="server" text="Contact" OnClick="btnContact_Click" />
+    <asp:Button ID="btnContact" BackColor="#FF6900" ForeColor="Black" runat="server" text="Contact" OnClick="btnContact_Click" />
     <asp:Label ID="lblFeedback" runat="server" />
 
 </asp:Content>
