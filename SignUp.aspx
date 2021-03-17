@@ -7,7 +7,7 @@
     <img src="Images/signuppage.jpg" alt="" style="max-width:100%; height:auto;" />
 
     <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Sign Up</p>
-
+    <p style="text-align:left; font-size: 24px; color:#FFE4C4; font-family:Roboto;">Sign up for our mailing list to receive news and special offers.</p>
 
 <table>
 
@@ -56,6 +56,6 @@
     <br />
 
      <%-------------------------------- Feedback ------------------------------------%> 
-        <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center;" />
+        <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center; color:#FF6900;" />
  
 </asp:Content>

@@ -65,7 +65,6 @@
                         <li><a style="color:#FF6900; font-family:Sigmar One;" runat="server" href="~/Menu">Menu</a></li>
                         <li><a style="color:#FF6900; font-family:Sigmar One;" runat="server" href="~/About">About</a></li>
                         <li><a style="color:#FF6900; font-family:Sigmar One;" runat="server" href="~/Contact">Contact</a></li>
-                        <li><a style="color:#FF6900; font-family:Sigmar One;" runat="server" href="~/Leaderboard">Leaderboard</a></li>
                         <li><a style="color:#FF6900; font-family:Sigmar One;" runat="server" href="~/Signup">Sign Up</a></li>
                         <li><a style="color:#FF6900; font-family:Sigmar One;" runat="server" href="~/Login">Login</a></li>
                     </ul>

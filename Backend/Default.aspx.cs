@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using Capstone.App_Code;
+
 
 namespace Capstone.Backend
 {
@@ -18,21 +18,44 @@ namespace Capstone.Backend
         }
         protected void loginButton_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "Capstone" && txtPassword.Text == "NEIT")
+
+
+
+
+            SqlConnection Conn = new SqlConnection();
+
+            Conn.ConnectionString = @"Server=sql.neit.edu\studentsqlserver,4500;Database=SE245_GMartin;User Id=SE245_GMartin;Password=008003563;";
+
+            Conn.Open();
+
+            try
             {
-                //If both entries are a match, set sessions so that other pages know that they are logged in
-                Session["userName"] = txtUsername.Text;
+                SqlCommand Comm = new SqlCommand("select * from adminCredentials WHERE adUser='" + txtUsername.Text + "' AND adPassword='" + txtPassword.Text + "'", Conn);
+
+                SqlDataReader dr = Comm.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        //Response.Write("<script>alert('Login successful');</script>");
+                        Session["adminname"] = dr.GetValue(1).ToString();
+
                 Session["loginSuccessful"] = "TRUE";
                 lblFeedback.Text = "Login successful.";
                 Response.Redirect("ControlPanel.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid credentials');</script>");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                //Else, show try again message
-                Session["userName"] = "";
-                Session["loginSuccessful"] = "FALSE";
-                lblFeedback.Text = "Login unsuccessful. Please try again.";
+                //Response.Write("<script>alert('" + ex.Message + "');</script>");
+                //return false;
             }
         }
     }
 }
+
