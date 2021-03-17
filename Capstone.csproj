@@ -143,7 +143,7 @@
     <Content Include="Images\homepageLeaderboard.jpg" />
     <Content Include="Images\homepageMenu.jpg" />
     <Content Include="Images\homepageWings.jpg" />
-    <Content Include="Leaderboard.aspx" />
+    <Content Include="Userpage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Review.aspx" />
@@ -256,12 +256,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Leaderboard.aspx.cs">
-      <DependentUpon>Leaderboard.aspx</DependentUpon>
+    <Compile Include="Userpage.aspx.cs">
+      <DependentUpon>Userpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Leaderboard.aspx.designer.cs">
-      <DependentUpon>Leaderboard.aspx</DependentUpon>
+    <Compile Include="Userpage.aspx.designer.cs">
+      <DependentUpon>Userpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

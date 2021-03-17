@@ -10,30 +10,34 @@
 
     <p style="text-align:center; font-size: 56px; color:#FF6900; font-family:Sigmar One;">Member login</p>
 
-    <table>
 
 
-        <tr>
+
+        <div>
         <%-------------------------------- Username ------------------------------------%>
-        <td style="color:#FF6900;">Username:</td>
-        <td><asp:TextBox ID="txtUsername" runat="server" /></td>
-        </tr>
+        <asp:Label ID="lblUsername" ForeColor="#FF6900" runat="server" Text="Username:"></asp:Label>
+            <br />
+        <asp:TextBox ID="txtUsername" runat="server" />
+            <br />
+        
 
-        <tr>
+        
         <%-------------------------------- Password ------------------------------------%>
-        <td style="color:#FF6900;">Password:</td>
-        <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /></td>
-        </tr>
+        <asp:Label ID="lblPassword" ForeColor="#FF6900" runat="server" Text="Password:"></asp:Label>
+            <br />
+        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
+            <br />
+        
 
-    </table>
 
     
         <%-------------------------------- Login button ------------------------------------%>
         <asp:Button ID="loginButton" BackColor="#FF6900" ForeColor="Black" runat="server" onClick="loginButton_Click" Text="Login" />
+            <br />
 
         <asp:Label ID="lblFeedback" ForeColor="#FF6900" runat="server" Text="" />
  
-
+        </div>
 
 
 
