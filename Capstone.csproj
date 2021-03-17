@@ -184,6 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\contactUs.cs" />
+    <Content Include="App_Code\user.cs" />
+    <Content Include="App_Code\Euser.cs" />
     <Compile Include="App_Code\userCredentials.cs" />
     <Compile Include="App_Code\wing.cs" />
     <Compile Include="App_Code\validation.cs" />
