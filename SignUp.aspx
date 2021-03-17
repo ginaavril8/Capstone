@@ -56,6 +56,6 @@
     <br />
 
      <%-------------------------------- Feedback ------------------------------------%> 
-        <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center;" />
+        <asp:Label ID="lblFeedback" runat="server" Text="" style="text-align:center; color:#FF6900;" />
  
 </asp:Content>
