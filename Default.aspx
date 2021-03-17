@@ -19,19 +19,17 @@
     <%--------------------------------- Img + Menu Link ------------------------------------%>
     <div class="homeDiv">
 
-        <img src="Images/homepageMenu.jpg" alt=""  style="max-width:60%; height:auto; float:left;" />
 
-        <a href="Menu" style="text-align:center; font-size: 24px; color:#FF6900; font-family:Sigmar One; float:right;">Menu</a>
+
+        <a href="Menu"><img src="Images/menuLink.png" alt="Menu" style="max-width:100%; height:auto; float:left;" /></a>
 
     </div>
     
 
-    <%--------------------------------- Img + Leaderboard Link ------------------------------------%>
+    <%--------------------------------- Img + About Link ------------------------------------%>
     <div class="homeDiv">
 
-        <a href="Leaderboard" style="text-align:center; clear:left; font-size: 24px; color:#FF6900; font-family:Sigmar One; float:left;">Leaderboard</a>
-
-        <img src="Images/homepageLeaderboard.jpg" alt=""  style="max-width:60%; height:auto; float:right;" />
+        <a href="About"><img src="Images/aboutLink.png" alt="About" style="max-width:100%; height:auto; float:left;" /></a>
 
     </div>
 
@@ -39,9 +37,7 @@
     <%--------------------------------- Img + About Link ------------------------------------%>
     <div class="homeDiv">
 
-        <img src="Images/homepageAbout.jpg" alt=""  style="max-width:60%; height:auto; float:left;" />
-
-        <a href="About" style="text-align:center; font-size: 24px; color:#FF6900; font-family:Sigmar One; float:right;">About</a>
+        <a href="Contact"><img src="Images/contactLink.png" alt="Contact" style="max-width:100%; height:auto; float:left;" /></a>
 
     </div>
 
